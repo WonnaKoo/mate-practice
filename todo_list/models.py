@@ -12,4 +12,3 @@ class Task(models.Model):
     deadline = models.DateTimeField(null=True, blank=True)
     is_done = models.BooleanField(default=False)
     tags = models.ManyToManyField(Tag, related_name="tasks")
-    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
